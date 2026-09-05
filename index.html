@@ -3,47 +3,254 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MineSuraksha — Digital Record</title>
+<title>MineSuraksha — Digital Record — UHIC-BL-2020-01</title>
 <style>
-body{font-family:Arial,sans-serif;margin:0;padding:16px;color:#151c29;background:#f7f8fc}
-h1{color:#004bc6;font-size:20px;margin:0 0 2px}
-.sub{color:#737686;font-size:13px;margin-bottom:16px}
-.card{background:#fff;border:1px solid #c3c6d7;border-radius:8px;padding:16px;margin-bottom:14px}
-.lbl{font-size:11px;color:#737686;text-transform:uppercase;font-weight:bold}
-.val{font-size:15px;margin:2px 0 12px}
-.pill{display:inline-block;background:#dbe1ff;color:#004bc6;font-weight:bold;padding:4px 12px;border-radius:20px;font-size:13px}
-ul{margin:4px 0;padding-left:20px;font-size:14px}
-.note{font-size:12px;color:#a55b00;background:#fff0dc;padding:10px;border-radius:6px;margin-top:16px}
+  :root{
+    --primary:#004bc6; --primary-fixed:#dbe1ff; --surface-low:#f1f3ff;
+    --outline:#737686; --outline-variant:#c3c6d7; --on-surface:#151c29;
+    --error:#ba1a1a; --success:#006d31; --tertiary:#a55b00; --tertiary-bg:#fff0dc;
+  }
+  *{box-sizing:border-box}
+  body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px;color:var(--on-surface);background:#f7f8fc;max-width:720px;margin:0 auto}
+  h1{color:var(--primary);font-size:20px;margin:14px 0 2px}
+  .sub{color:var(--outline);font-size:13px;margin-bottom:16px}
+  h2{font-size:15px;color:var(--primary);border-bottom:2px solid var(--primary-fixed);padding-bottom:6px;margin-top:26px}
+  h3{font-size:13px;color:var(--on-surface);margin:14px 0 6px}
+  .card{background:#fff;border:1px solid var(--outline-variant);border-radius:8px;padding:14px;margin-bottom:12px}
+  .lbl{font-size:10px;color:var(--outline);text-transform:uppercase;font-weight:bold;letter-spacing:.02em}
+  .val{font-size:14px;margin:2px 0 10px}
+  .pill{display:inline-block;background:var(--primary-fixed);color:var(--primary);font-weight:bold;padding:3px 10px;border-radius:20px;font-size:12px}
+  .pill.ok{background:#d5f5df;color:var(--success)}
+  .pill.warn{background:var(--tertiary-bg);color:var(--tertiary)}
+  ul{margin:4px 0;padding-left:18px;font-size:13.5px}
+  ul.plain{list-style:none;padding-left:0}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:4px 16px}
+  @media(max-width:480px){.grid2{grid-template-columns:1fr}}
+  table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  th,td{border:1px solid var(--outline-variant);padding:7px 8px;text-align:left;vertical-align:top}
+  th{background:var(--surface-low);font-size:11px;text-transform:uppercase;color:var(--outline)}
+  .row-item{display:flex;justify-content:space-between;align-items:center;gap:10px;border-bottom:1px solid var(--outline-variant);padding:8px 0;font-size:13.5px}
+  .row-item:last-child{border-bottom:none}
+  .view-link{flex-shrink:0;font-size:12px;font-weight:bold;color:var(--primary);text-decoration:none;background:var(--surface-low);padding:5px 10px;border-radius:6px;white-space:nowrap}
+  .view-link:hover{background:var(--primary-fixed)}
+  .note{font-size:12px;color:var(--tertiary);background:var(--tertiary-bg);padding:10px;border-radius:6px;margin-top:18px}
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  @media(max-width:480px){.gallery{grid-template-columns:1fr}}
+  .gallery figure{margin:0;background:#fff;border:1px solid var(--outline-variant);border-radius:8px;overflow:hidden}
+  .gallery img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+  .gallery figcaption{font-size:11.5px;color:var(--outline);padding:8px 10px}
+  .gallery figcaption b{color:var(--on-surface);display:block;font-size:12.5px;margin-bottom:2px}
+  footer{font-size:11px;color:var(--outline);margin:24px 0 8px;text-align:center}
 </style>
 </head>
 <body>
+
 <h1>MineSuraksha &middot; Digital Record</h1>
 <div class="sub">UHIC-BL-2020-01 &middot; Blasting &middot; CANNCO Iron Ore Mines</div>
 
+<!-- 1. Reporting -->
+<h2>1. Reporting</h2>
 <div class="card">
-<div class="lbl">Hazard</div>
-<div class="val">Loose rock overhang above active bench</div>
-<div class="lbl">Risk Score</div>
-<div class="val"><span class="pill">150 (Residual)</span> &nbsp; was 270 (Initial)</div>
-<div class="lbl">Status</div>
-<div class="val">Closed &middot; Post Monitoring Active</div>
+  <div class="grid2">
+    <div><div class="lbl">SMP / Report ID</div><div class="val">RPT-2020</div></div>
+    <div><div class="lbl">UHIC</div><div class="val">UHIC-BL-2020-01</div></div>
+    <div><div class="lbl">Department</div><div class="val">Blasting</div></div>
+    <div><div class="lbl">Location</div><div class="val">Pit 3, Bench 7</div></div>
+    <div><div class="lbl">Reported By</div><div class="val">A. Singh &middot; +91 98765 43210</div></div>
+    <div><div class="lbl">Organized By</div><div class="val">You (Manager)</div></div>
+  </div>
+  <div class="lbl">Hazard</div>
+  <div class="val">Loose rock overhang above active bench</div>
 </div>
 
+<h3>Attendees &amp; Consent</h3>
 <div class="card">
-<div class="lbl">Attachments</div>
-<ul>
-<li>Scaled_Face_Before_Mesh.jpg (Photo)</li>
-<li>Completed_Mesh_Support.jpg (Photo)</li>
-</ul>
+  <table>
+    <tr><th>Name</th><th>Role</th></tr>
+    <tr><td>S. Mishra</td><td>Safety Officer</td></tr>
+    <tr><td>Debasish Panda</td><td>Department Head</td></tr>
+    <tr><td>A. Singh</td><td>RAT Member</td></tr>
+    <tr><td>P. Das</td><td>Field Executor</td></tr>
+  </table>
 </div>
 
+<!-- 2. Stage Timeline -->
+<h2>2. Stage Timeline (1&ndash;10)</h2>
 <div class="card">
-<div class="lbl">Audit History</div>
-<ul>
-<li>AUD-BL-1975-00 &middot; 20 Sep 2026 &middot; Result: Clear</li>
-</ul>
+  <table>
+    <tr><th>Stage</th><th>Milestone</th><th>Date</th></tr>
+    <tr><td>1</td><td>Hazard Identification</td><td>10 Oct 2026</td></tr>
+    <tr><td>2</td><td>Initial Report Filed</td><td>10 Oct 2026</td></tr>
+    <tr><td>3</td><td>RAT Review</td><td>10 Oct 2026</td></tr>
+    <tr><td>4</td><td>Attendance &amp; Consent</td><td>11 Oct 2026</td></tr>
+    <tr><td>5</td><td>Control Plan Drafted</td><td>11 Oct 2026</td></tr>
+    <tr><td>6</td><td>Work Plan Drafted</td><td>12 Oct 2026</td></tr>
+    <tr><td>7</td><td>Field Implementation</td><td>13 Oct 2026</td></tr>
+    <tr><td>8</td><td>Checkpoint Verification</td><td>13 Oct 2026</td></tr>
+    <tr><td>9</td><td>Monitoring Setup</td><td>14 Oct 2026</td></tr>
+    <tr><td>10</td><td>Residual Assessment &amp; Closure</td><td>20 Oct 2026 (Closed)</td></tr>
+  </table>
 </div>
 
-<div class="note">This is a demo digital record page. Once MineSuraksha is fully hosted with a backend, this page will show live, always-current data for the scanned SMP.</div>
+<!-- 3. Control Plan -->
+<h2>3. Control Plan</h2>
+<div class="card">
+  <div class="grid2">
+    <div><div class="lbl">Activity</div><div class="val">Blasting</div></div>
+    <div><div class="lbl">Activity CEP Score</div><div class="val">270</div></div>
+    <div><div class="lbl">Reporting CEP (C&times;E&times;P)</div><div class="val">6 &times; 6 &times; 5 = 180</div></div>
+    <div><div class="lbl">Control Type</div><div class="val">Elimination (100% effective)</div></div>
+    <div><div class="lbl">ERCI</div><div class="val"><span class="pill">Critical</span></div></div>
+    <div><div class="lbl">Target Date</div><div class="val">13 Oct 2026</div></div>
+    <div><div class="lbl">Assigned To</div><div class="val">Debasish Panda</div></div>
+  </div>
+
+  <h3>Mechanism Steps</h3>
+  <ul>
+    <li>Weathering reduces rock mass cohesion over time.</li>
+    <li>Vibration from nearby blasting accelerates detachment.</li>
+  </ul>
+
+  <h3>Control Measures</h3>
+  <ul>
+    <li>Scale loose overhang.</li>
+    <li>Install mesh support across exposed face.</li>
+  </ul>
+
+  <h3>Reference</h3>
+  <ul class="plain">
+    <li class="row-item">
+      <span>SOP-BLAST-009: Scaling &amp; Mesh Support Procedure</span>
+      <a class="view-link" href="https://placehold.co/800x1000/ffffff/151c29?text=SOP-BLAST-009%0APage+1" target="_blank">View File</a>
+    </li>
+  </ul>
+
+  <h3>Procedure Steps</h3>
+  <ol>
+    <li>Cordon off area below overhang.</li>
+    <li>Scale loose material using approved method.</li>
+    <li>Install mesh support across exposed face.</li>
+    <li>Inspect and sign off before reopening area.</li>
+  </ol>
+
+  <h3>HIRA Reference</h3>
+  <ul class="plain">
+    <li class="row-item">
+      <span>HIRA-MIN-0042: Blasting Operations — Fly Rock Risk</span>
+      <a class="view-link" href="https://placehold.co/800x1000/ffffff/151c29?text=HIRA-MIN-0042" target="_blank">View File</a>
+    </li>
+  </ul>
+
+  <h3>ALARA Justification</h3>
+  <div class="val">Full scaling performed; residual risk reduced to lowest achievable with available equipment.</div>
+
+  <h3>Flags</h3>
+  <table>
+    <tr><th>Flag</th><th>Status</th></tr>
+    <tr><td>Yellow Flag</td><td>No</td></tr>
+    <tr><td>IAF Flag</td><td>No</td></tr>
+    <tr><td>Residual Assessment Required</td><td>No</td></tr>
+    <tr><td>Post Monitoring Required</td><td>Yes</td></tr>
+  </table>
+</div>
+
+<!-- 4. Work Plan -->
+<h2>4. Work Plan</h2>
+<div class="card">
+  <div class="lbl">WPIC</div><div class="val">WP-UHIC-BL-2020-01</div>
+
+  <h3>Team Members</h3>
+  <table>
+    <tr><th>Name</th><th>Role</th></tr>
+    <tr><td>S. Mishra</td><td>Safety Officer</td></tr>
+    <tr><td>Debasish Panda</td><td>Department Head</td></tr>
+    <tr><td>A. Singh</td><td>RAT Member</td></tr>
+    <tr><td>P. Das</td><td>Field Executor</td></tr>
+  </table>
+
+  <h3>Task Breakdown</h3>
+  <table>
+    <tr><th>#</th><th>Task</th><th>Completed</th></tr>
+    <tr><td>1</td><td>Cordon off area below overhang.</td><td>Yes</td></tr>
+    <tr><td>2</td><td>Scale loose material using approved method.</td><td>Yes</td></tr>
+    <tr><td>3</td><td>Install mesh support across exposed face.</td><td>Yes</td></tr>
+    <tr><td>4</td><td>Inspect and sign off before reopening area.</td><td>Yes</td></tr>
+  </table>
+
+  <h3>Resources &amp; Services</h3>
+  <table>
+    <tr><th>Resource</th><th>When Needed</th><th>Where Needed</th><th>Date</th></tr>
+    <tr><td>Scaling bar &amp; rock-fall netting</td><td>Before implementation</td><td>Site location</td><td>12 Oct 2026</td></tr>
+    <tr><td>PPE (helmets, harness, gloves)</td><td>Throughout implementation</td><td>Site location</td><td>12 Oct 2026</td></tr>
+  </table>
+
+  <h3>Checkpoints &amp; Proof Required</h3>
+  <ul class="plain">
+    <li class="row-item">
+      <span>Need a picture of the scaled face before mesh install &middot; <i>Photo</i> &middot; Submitted</span>
+      <a class="view-link" href="https://placehold.co/900x700/e2e8fa/151c29?text=Scaled+Face+%E2%80%93+Before+Mesh" target="_blank">View File</a>
+    </li>
+    <li class="row-item">
+      <span>Need a picture of the completed mesh support &middot; <i>Photo</i> &middot; Submitted</span>
+      <a class="view-link" href="https://placehold.co/900x700/e2e8fa/151c29?text=Completed+Mesh+Support" target="_blank">View File</a>
+    </li>
+  </ul>
+
+  <h3>Ongoing Monitoring</h3>
+  <div class="grid2">
+    <div><div class="lbl">Review Frequency</div><div class="val">Quarterly</div></div>
+    <div><div class="lbl">Next Review Date</div><div class="val">20 Jan 2027</div></div>
+    <div><div class="lbl">Current Status</div><div class="val"><span class="pill">Not Hit</span></div></div>
+  </div>
+  <div class="lbl">Trigger Conditions</div>
+  <div class="val">Any visible rock movement, new cracking, or seismic activity &gt; 2.5 Richter within 5km radius.</div>
+</div>
+
+<!-- 5. Residual Assessment & Closure -->
+<h2>5. Residual Assessment &amp; Closure</h2>
+<div class="card">
+  <div class="grid2">
+    <div><div class="lbl">Completion Date</div><div class="val">20 Oct 2026</div></div>
+    <div><div class="lbl">Residual C / E / P</div><div class="val">2 / 2 / 2</div></div>
+    <div><div class="lbl">Residual CEP Score</div><div class="val"><span class="pill ok">8 (Low / Green)</span></div></div>
+    <div><div class="lbl">Initial &rarr; Residual</div><div class="val">270 &rarr; 8</div></div>
+    <div><div class="lbl">Closure Status</div><div class="val">Closed &middot; Post Monitoring Active</div></div>
+    <div><div class="lbl">Closed On / By</div><div class="val">20 Oct 2026 &middot; You (Manager)</div></div>
+  </div>
+</div>
+
+<!-- 6. Audit History -->
+<h2>6. Audit History</h2>
+<div class="card">
+  <ul class="plain">
+    <li class="row-item">
+      <span><b>AUD-BL-1975-00</b> &middot; 20 Sep 2026 &middot; Result: <span class="pill ok">Clear</span><br>
+      <span style="font-size:12px;color:var(--outline)">All sampled detonator connections passed inspection. No moisture ingress detected.</span></span>
+      <a class="view-link" href="https://placehold.co/800x1000/ffffff/151c29?text=Audit+Report%0AAUD-BL-1975-00" target="_blank">View Report</a>
+    </li>
+  </ul>
+</div>
+
+<!-- 7. Attachments -->
+<h2>7. Attachments — Before / After</h2>
+<div class="gallery">
+  <figure>
+    <img src="https://placehold.co/500x375/c3c6d7/151c29?text=BEFORE%0AOverhang+%E2%80%93+Unscaled" alt="Before scaling">
+    <figcaption><b>Before</b>Loose overhang, unscaled &middot; 12 Oct 2026</figcaption>
+  </figure>
+  <figure>
+    <img src="https://placehold.co/500x375/dbe1ff/004bc6?text=AFTER%0AScaled+%2B+Mesh+Installed" alt="After mesh installed">
+    <figcaption><b>After</b>Scaled &amp; mesh support installed &middot; 13 Oct 2026</figcaption>
+  </figure>
+</div>
+
+<div class="note">
+  This is a demo digital record page for MineSuraksha. Images and file links above are
+  placeholders — once real uploads are wired to a backend, these will show the actual
+  attached photos, reference documents, and audit reports.
+</div>
+
+<footer>MineSuraksha &middot; Scanned from printed SMP report</footer>
+
 </body>
 </html>
